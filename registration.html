@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Nike - Just Do It</title>
+    
+
+    <link rel="shortcut icon" href="image/nike-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* styles.css */
+body {
+    background-image: url(image/bg1.png);
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('registrationForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        var username = form.elements['username'].value;
+        var email = form.elements['email'].value;
+        var password = form.elements['password'].value;
+
+       
+        if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
+            alert('All fields are required.');
+            return;
+        }
+
+        alert(`Registration successful for user: ${username}`);
+        
+        form.reset();
+    });
+});
+
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Registration</h2>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="loginpage.html">Login here</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
